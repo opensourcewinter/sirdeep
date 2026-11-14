@@ -12,7 +12,7 @@
 *Self-hosted. Low-latency. Zero telemetry. Built for OpenWinter.*
 
 ```
-v1.0.0-release • Python 3.11+ • Discord Gateway v10 • MIT Licensed • Docker Ready
+v1.0.1-release • Python 3.11+ • Discord Gateway v10 • MIT Licensed • Docker Ready
 ```
 
 [Architecture](#-architecture) · [Feature Matrix](#-feature-matrix) · [Contributor Cards](#-contributor-passports) · [Quickstart](#-quickstart) · [Configuration](#-configuration) · [Documentation](docs/USAGE_GUIDE.md) · [Contributing](CONTRIBUTING.md)
