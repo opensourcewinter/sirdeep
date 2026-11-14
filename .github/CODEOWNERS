@@ -1,0 +1,13 @@
+# Global code owner for OpenWinter SirDeep
+* @harshitkrhere
+
+# Sensitive security components
+/src/core/security.py @harshitkrhere
+/src/core/audit.py @harshitkrhere
+/src/core/config.py @harshitkrhere
+
+# CI/CD Workflows & Policies
+/.github/workflows/ @harshitkrhere
+/SECURITY.md @harshitkrhere
+/Dockerfile @harshitkrhere
+/docker-compose.yml @harshitkrhere

@@ -1,0 +1,30 @@
+name: 💡 Feature Request
+description: Suggest an idea or architectural improvement for SirDeep
+labels: ["enhancement", "discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We welcome feature ideas and architecture suggestions for SirDeep!
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: Is your feature request related to a problem? Please describe clearly.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution / Architecture
+      description: Describe what you want to happen and how it fits into SirDeep's asynchronous architecture.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any alternative solutions or features you've considered.

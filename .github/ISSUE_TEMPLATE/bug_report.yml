@@ -1,0 +1,57 @@
+name: 🐛 Bug Report
+description: Create a bug report to help us improve SirDeep
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug!
+        > [!IMPORTANT]
+        > If you have discovered a **security vulnerability**, please report it privately via GitHub Security Advisories, not here.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps To Reproduce
+      description: Exact steps to reproduce the behavior.
+      placeholder: |
+        1. Start bot with `python main.py`
+        2. Run `/command`
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Terminal / Docker Logs
+      description: Paste relevant logs here. Please redact any real tokens or passwords before submitting!
+      render: shell
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Deployment Environment
+      options:
+        - Docker Compose
+        - Native Python (Linux / Ubuntu)
+        - Native Python (Windows)
+        - Native Python (macOS)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: sanitization
+    attributes:
+      label: Security & Privacy Confirmation
+      options:
+        - label: I have verified that no bot tokens, API keys, or private IDs are present in the logs above.
+          required: true
