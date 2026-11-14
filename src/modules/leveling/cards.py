@@ -1,7 +1,8 @@
+import io
 import os
 import sys
-import io
 from urllib.parse import urlparse
+
 import aiohttp
 from PIL import Image, ImageDraw, ImageFont
 
@@ -45,8 +46,7 @@ def draw_rounded_rect(draw, bbox, radius, fill, outline=None, width=1):
 
 def clean_tag_text(text: str) -> str:
     for prefix in ["💻 ", "🌐 ", "🧠 ", "🎨 ", "📢 ", "🌱 ", "🛠️ ", "⚡ ", "❄️ ", "💎 "]:
-        if text.startswith(prefix):
-            text = text[len(prefix):]
+        text = text.removeprefix(prefix)
     return text.strip()
 
 async def render_contributor_card(member, guild, level=1, xp=0, needed_xp=100, rank_pos=1, rep_points=0, specializations=None):

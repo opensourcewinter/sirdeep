@@ -1,5 +1,6 @@
 import discord
 
+
 class RadioControlView(discord.ui.View):
     def __init__(self, radio_player, config):
         super().__init__(timeout=None)

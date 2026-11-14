@@ -1,8 +1,8 @@
 import os
-import aiohttp
-import discord
-from datetime import datetime
 from collections import defaultdict
+from datetime import datetime
+
+import aiohttp
 
 DEFAULT_SYSTEM_PROMPT = (
     "You are SirDeep, the resident open-source AI companion for this developer community. "
