@@ -1,273 +1,127 @@
-<p align="center">
-  <img src="assets/branding/banner.jpg" alt="SirDeep Banner" width="100%">
-</p>
+<div align="center">
 
-<h1 align="center">⚡ SirDeep</h1>
+<img src="assets/branding/banner.jpg" alt="SirDeep Banner" width="100%" />
 
-<p align="center">
-  <b>The Autonomous Community Engine & AI Companion for Developer Guilds</b><br>
-  <i>Built for <a href="https://github.com/OpenWinter">OpenWinter</a> — Fast, Resilient, and 100% Open-Source.</i>
-</p>
+# SirDeep
 
-<p align="center">
-  <a href="#-key-capabilities">Key Features</a> •
-  <a href="#-demo--walkthrough">Demo Video</a> •
-  <a href="#-quickstart-guide">Quickstart</a> •
-  <a href="#-system-architecture">Architecture</a> •
-  <a href="docs/USAGE_GUIDE.md">Full User Guide</a> •
-  <a href="CONTRIBUTING.md">Contributing</a> •
-  <a href="CODE_OF_CONDUCT.md">Code of Conduct</a>
-</p>
+**Autonomous community infrastructure for modern engineering guilds.**  
+*Self-hosted. Zero telemetry. Built for OpenWinter.*
+
+[Architecture](#architecture) · [Quickstart](#quickstart) · [Documentation](docs/USAGE_GUIDE.md) · [Contributing](CONTRIBUTING.md) · [License](LICENSE)
+
+</div>
 
 ---
 
-## 🎬 Demo Video & Live Walkthrough
+## Overview
 
-Experience SirDeep in action: 1-command startup, AI pair programming, 24/7 coding radio streaming with equalizer visualizer, and dynamic glassmorphic card rendering.
+SirDeep is a modular, self-hosted Discord automation core designed for software engineering communities. Built asynchronously with `discord.py` and Python 3.11+, it consolidates audit monitoring, security rate-limiting, local/cloud AI pair programming, 24/7 low-latency audio streaming, and dynamic contributor recognition into a single containerized process.
 
-<p align="center">
-  <img src="assets/branding/demo.gif" alt="SirDeep Demo Screencast" width="90%">
-</p>
-
-<p align="center">
-  ▶️ <b><a href="assets/branding/demo.mp4">Watch Full 1080p HD Demo Video with Soundtrack (demo.mp4)</a></b> •
-  🎥 <b><a href="docs/DEMO_WALKTHROUGH.md">Video Script & Scene Breakdown</a></b>
-</p>
+- **Zero Telemetry**: No third-party data collection. Completely private and self-contained.
+- **Local or Cloud AI**: Native support for local Ollama instances alongside OpenRouter, OpenAI, and Gemini.
+- **Audit & Anti-Nuke Watchdog**: Real-time moderation logging and automatic privilege revocation on rapid deletions.
+- **Dynamic PIL Leveling**: High-definition glassmorphic contributor cards generated on-demand.
+- **Continuous Radio**: Low-memory FFmpeg streaming for ambient and lo-fi audio.
 
 ---
 
-## 🌟 Overview
+## Contributor Recognition
 
-**SirDeep** is a production-grade Discord application engineered specifically for developer communities, open-source organizations, and technical teams. Unlike monolithic generic bots, SirDeep is modular, lightweight, and self-hostable with **zero external telemetry**.
+SirDeep includes a built-in PIL rendering pipeline that dynamically generates high-DPI contributor profile cards with custom status rings, anti-aliased avatars, and role progression badges:
 
-It combines a **real-time security watchdog**, **multi-station 24/7 coding radio**, **pluggable cloud/local AI engine**, **glassmorphic contributor card generation**, and **automated technical debate orchestration** into a unified, asynchronous Python core.
-
----
-
-## 🚀 Key Capabilities
-
-### 🛡️ Autonomous Security & Audit Sentinel
-* **Anti-Nuke Rate Limiter**: Automatically detects and halts rapid channel or role deletions caused by compromised admin accounts or rogue integrations.
-* **Instant Staff Quarantine**: Immediately strips administrative privileges from flagged actors upon abnormal deletion velocities.
-* **Audit Sentinel**: Streams detailed, color-coded moderation events (bans, unbans, kicks, timeouts, role modifications, channel updates) to your private `#audit-logs` channel in real time.
-* **Phishing & Malicious Domain Shield**: Regex-based heuristic inspection of message URLs against known scam and credential harvesting patterns.
-
-### 🧠 Pluggable AI Companion
-* **Multi-Provider Support**: Seamlessly switch between **OpenRouter**, **Google Gemini**, **OpenAI**, or 100% offline local inference via **Ollama**.
-* **Sliding TTL Memory**: Retains conversation history per developer with configurable time-to-live and automatic memory pruning.
-* **Built-in Prompt Guard**: Input sanitization, length boundaries, and injection pattern filtering to protect your token quota and prevent context leakage.
-
-### 📻 24/7 Lo-Fi & Deep Work Radio
-* **Low-Latency Streaming**: Hardware-accelerated audio demuxing via FFmpeg.
-* **Curated Stations**: Pre-configured feeds for *Lo-Fi Beats*, *Synthwave & Cyberpunk*, *Chillhop*, and *Deep Focus Flow*.
-* **Fault-Tolerant Reconnect**: Automatically recovers and rejoins the designated voice channel after network drops or Discord gateway reconnections.
-
-### 📊 Dynamic Contributor Leveling & Glassmorphic Cards
-* **Custom Profile Renderer**: Generates high-DPI (1000×520) glassmorphic contributor cards directly in Python using Pillow.
-* **Anti-Aliased Circular Avatars**: Securely pulls avatars from Discord CDN with strict byte limits and decompression-bomb safeguards.
-* **Contributor Tiers**: Automatically awards visual badges (`BUILDER`, `CORE CONTRIBUTOR`, `SENIOR ARCHITECT`) based on community engagement and helpfulness.
-
-<p align="center">
-  <img src="assets/branding/sample_card.png" alt="SirDeep Contributor Card Sample" width="750">
-</p>
-
-### 💬 Daily Engineering Dilemmas
-* **Autonomous Debates**: Posts scheduled, high-signal technical debate prompts into your discussions channel.
-* **Dedicated Threads**: Automatically spawns a discussion thread for each dilemma (e.g. *Monolith vs Microservices*, *Rust vs Go for Tooling*, *Postgres vs ClickHouse*).
+<div align="center">
+  <img src="assets/branding/sample_card.png" alt="OpenWinter Contributor Card" width="720" />
+</div>
 
 ---
 
-## 🏛️ System Architecture
+## Architecture
 
 ```mermaid
-flowchart TD
-    subgraph Discord Gateway
-        GW[Discord WebSocket Gateway v10]
+flowchart LR
+    GW([Discord Gateway v10]) --> BOT[SirDeep Bot Core]
+    
+    subgraph Services
+        BOT --> SEC[Security & Anti-Nuke]
+        BOT --> AUD[Audit Logger]
+        BOT --> AI[AI Inference Engine]
+        BOT --> RAD[FFmpeg Radio Streamer]
+        BOT --> LVL[Leveling & PIL Cards]
     end
 
-    subgraph SirDeep Core
-        BOT[SirDeepBot Async Client]
-        CFG[Typed Config Manager]
-        
-        GW -->|Events| BOT
-        BOT --> CFG
-        
-        subgraph Subsystems
-            SEC[Security & Anti-Nuke Sentinel]
-            AUD[Audit Logger Engine]
-            AI[Hybrid AI Inference Engine]
-            RAD[24/7 Radio Streamer]
-            LVL[Leveling & Pillow Card Engine]
-            DEB[Daily Debate Scheduler]
-        end
-        
-        BOT --> SEC
-        BOT --> AUD
-        BOT --> AI
-        BOT --> RAD
-        BOT --> LVL
-        BOT --> DEB
-    end
-
-    subgraph External & Local Services
-        OLLAMA[(Local Ollama Instance)]
-        OPENROUTER[(Cloud AI APIs)]
-        FFMPEG[[FFmpeg Audio Demuxer]]
-        CDN[(Discord CDN)]
-    end
-
-    AI -.->|Local HTTP| OLLAMA
-    AI -.->|HTTPS API| OPENROUTER
-    RAD -.->|Stream Pipe| FFMPEG
-    LVL -.->|Avatar Fetch| CDN
+    AI --> OLLAMA[(Local Ollama)]
+    AI --> CLOUD[(OpenRouter / Cloud APIs)]
+    RAD --> AUDIO[[Live Audio Demuxer]]
 ```
 
 ---
 
-## ⚡ Quickstart Guide
+## Quickstart
 
-### Option 1: Docker Compose (Recommended)
-
-The easiest way to run SirDeep in production with zero host dependency conflicts:
+### Docker Compose (Recommended)
 
 ```bash
-# 1. Clone repository
+# Clone the repository
 git clone https://github.com/OpenWinter/sirdeep.git
 cd sirdeep
 
-# 2. Configure credentials
+# Configure environment
 cp .env.example .env
 cp config/config.example.yaml config/config.yaml
 
-# 3. Edit your .env with your bot token
-nano .env
-
-# 4. Launch in detached mode
+# Start container in detached mode
 docker compose up -d --build
 ```
 
-View live logs:
-```bash
-docker compose logs -f
-```
-
----
-
-### Option 2: Native Python
-
-**Requirements**:
-* Python 3.11 or higher
-* FFmpeg installed and available on system `PATH` (or set `FFMPEG_PATH` in `.env`)
+### Local Python Environment
 
 ```bash
-# 1. Clone & enter project
-git clone https://github.com/OpenWinter/sirdeep.git
-cd sirdeep
-
-# 2. Create and activate a virtual environment
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-
-# 3. Install production dependencies
 pip install -r requirements.txt
 
-# 4. Configure environment
 cp .env.example .env
 cp config/config.example.yaml config/config.yaml
 
-# 5. Start SirDeep
 python main.py
 ```
 
 ---
 
-## ⚙️ Configuration Reference
+## Configuration
 
 ### Environment Variables (`.env`)
 
-| Variable | Description | Default / Example |
+| Key | Description | Example |
 | :--- | :--- | :--- |
-| `DISCORD_BOT_TOKEN` | Discord Bot token from Developer Portal | `Required` |
+| `DISCORD_BOT_TOKEN` | Bot application token | `Required` |
 | `DISCORD_GUILD_ID` | Primary server Snowflake ID | `123456789012345678` |
-| `AI_PROVIDER` | Active AI backend (`openrouter`, `gemini`, `openai`, `ollama`) | `openrouter` |
-| `OPENROUTER_API_KEY` | OpenRouter API key | `Optional` |
-| `GEMINI_API_KEY` | Google Gemini API key | `Optional` |
-| `OLLAMA_BASE_URL` | Local Ollama endpoint | `http://localhost:11434` |
-| `FFMPEG_PATH` | Explicit path to FFmpeg binary | *(System PATH / Auto-detect)* |
+| `AI_PROVIDER` | Backend provider (`openrouter`, `ollama`, `gemini`, `openai`) | `openrouter` |
+| `OPENROUTER_API_KEY` | API Key for OpenRouter models | `sk-or-v1-...` |
+| `OLLAMA_BASE_URL` | Local inference endpoint | `http://localhost:11434` |
+| `FFMPEG_PATH` | Custom FFmpeg binary path (optional) | `/usr/bin/ffmpeg` |
 
-### Server Configuration (`config/config.yaml`)
-
-```yaml
-guild:
-  name: "OpenWinter"
-  primary_color: 0x00d2ff
-  accent_color: 0x10b981
-
-channels:
-  audit_logs: "audit-logs"
-  welcome: "welcome"
-  debates: "tech-debates"
-  radio_voice: "24-7-coding-radio"
-
-security:
-  anti_nuke:
-    max_channel_deletions_per_minute: 3
-    max_role_deletions_per_minute: 3
-    quarantine_action: "strip_roles"
-
-radio:
-  default_station: "lofi"
-  auto_reconnect: true
-```
+Detailed module configuration (stations, security thresholds, XP curves) is managed in `config/config.yaml`. See the [Full User Guide](docs/USAGE_GUIDE.md) for details.
 
 ---
 
-## 🔒 Security & Gateway Intents
+## Security
 
-### Required Privileged Gateway Intents
-To enable real-time audit event capturing, member welcome generation, and interactive chat, SirDeep requires the following intents in the **Discord Developer Portal**:
+SirDeep implements strict protocol validation on audio streams (SSRF prevention), bounded image decompression (`Image.MAX_IMAGE_PIXELS`), and input sanitization on all AI prompts.
 
-1. Navigate to **Applications** $\rightarrow$ **SirDeep** $\rightarrow$ **Bot**.
-2. Under **Privileged Gateway Intents**, enable:
-   * ✅ **Server Members Intent**
-   * ✅ **Message Content Intent**
-3. Save changes.
-
-### Security Disclosures
-For details on reporting security vulnerabilities, please refer to our [SECURITY.md](SECURITY.md). We adhere to coordinated vulnerability disclosure with a 48-hour initial response SLA.
+To report a vulnerability, please review our [Security Policy](SECURITY.md).
 
 ---
 
-## 🤝 Contributing & Community Standards
+## Community & Contributing
 
-We welcome contributions from developers worldwide! Before contributing, please review:
-* 📘 **[Contributing Guidelines](CONTRIBUTING.md)**: Development setup, coding style, type safety, and PR process.
-* 📜 **[Code of Conduct](CODE_OF_CONDUCT.md)**: Our standards for an inclusive, respectful open-source community.
-* 🔒 **[Security Policy](SECURITY.md)**: How to report vulnerabilities responsibly.
+SirDeep is an open-source project maintained by the **OpenWinter** community.
 
-Quick workflow:
-1. **Fork the Repository** to your personal GitHub account.
-2. **Create a Feature Branch**:
-   ```bash
-   git checkout -b feat/my-new-feature
-   ```
-3. **Commit Your Changes** following [Conventional Commits](https://www.conventionalcommits.org/):
-   ```bash
-   git commit -m "feat(ai): add Claude 3.5 Sonnet provider preset"
-   ```
-4. **Push to Your Branch**:
-   ```bash
-   git push origin feat/my-new-feature
-   ```
-5. **Open a Pull Request** describing your changes and testing steps.
+- Review our [Contributing Guidelines](CONTRIBUTING.md) for code style, type safety, and PR workflow.
+- Review our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ---
 
-## 📜 License
+## License
 
-Distributed under the **MIT License**. See [LICENSE](LICENSE) for more information.
-
-<p align="center">
-  <b>Built with ❄️ by <a href="https://github.com/OpenWinter">OpenWinter</a></b><br>
-  <i>Empowering open-source developers, one community at a time.</i>
-</p>
+[MIT License](LICENSE) © 2026 OpenWinter
