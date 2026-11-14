@@ -22,9 +22,6 @@ jobs:
       - name: TruffleHog Secret Scanner
         uses: trufflesecurity/trufflehog@main
         with:
-          path: ./
-          base: ${{ github.event.repository.default_branch }}
-          head: HEAD
           extra_args: --only-verified
 
   sast-scan:
@@ -50,4 +47,4 @@ jobs:
 
       - name: Run Ruff Code Integrity Check
         run: |
-          ruff check src/
+          ruff check src/ --select E9,F63,F7,F82

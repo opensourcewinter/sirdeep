@@ -1,12 +1,14 @@
 import os
-import yaml
 from dataclasses import dataclass, field
-from typing import List, Dict, Any
+from typing import Any
+
+import yaml
+
 
 @dataclass
 class ServerConfig:
     guild_id: int = 0
-    owner_ids: List[int] = field(default_factory=list)
+    owner_ids: list[int] = field(default_factory=list)
     name: str = "OpenWinter"
     tagline: str = "Build together. Share freely."
 
@@ -49,7 +51,7 @@ class AIConfig:
     memory_ttl_seconds: int = 7200
 
 class AppConfig:
-    def __init__(self, config_dict: Dict[str, Any]):
+    def __init__(self, config_dict: dict[str, Any]):
         srv = config_dict.get("server", {})
         self.server = ServerConfig(
             guild_id=int(os.getenv("DISCORD_GUILD_ID", srv.get("guild_id", 0))),
@@ -64,7 +66,7 @@ class AppConfig:
         # Radio stations
         radio_data = config_dict.get("radio", {})
         self.default_station = radio_data.get("default_station", "lofi")
-        self.stations: Dict[str, RadioStation] = {}
+        self.stations: dict[str, RadioStation] = {}
         for key, st_data in radio_data.get("stations", {}).items():
             self.stations[key] = RadioStation(**st_data)
 

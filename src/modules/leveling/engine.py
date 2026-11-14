@@ -1,9 +1,12 @@
-import os
 import json
+import os
 import random
 from datetime import datetime
+
 import discord
+
 from .cards import render_contributor_card
+
 
 class LevelingEngine:
     def __init__(self, client, config):

@@ -1,8 +1,9 @@
-import os
-import sys
-import shutil
 import asyncio
+import os
+import shutil
+import sys
 from urllib.parse import urlparse
+
 import discord
 
 FFMPEG_OPTIONS = {

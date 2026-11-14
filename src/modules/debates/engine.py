@@ -1,8 +1,10 @@
-import os
 import json
+import os
 import random
 from datetime import datetime
+
 import discord
+
 
 class DebateEngine:
     def __init__(self, client, config):
@@ -87,8 +89,8 @@ class DebateEngine:
                 f"> **\"{debate['question']}\"**\n\n"
                 f"◈ **KEY ARCHITECTURAL TRADE-OFFS:**\n"
                 + "\n".join([f"• {p}" for p in debate["points"]]) + "\n\n"
-                f"◈ **COMMUNITY GUIDELINES:**\n"
-                f"Jump into the **💬 Discussion Thread** attached below! Post your real-world benchmarks, war stories, and code snippets."
+                "◈ **COMMUNITY GUIDELINES:**\n"
+                "Jump into the **💬 Discussion Thread** attached below! Post your real-world benchmarks, war stories, and code snippets."
             ),
             color=0x00D2FF,
             timestamp=discord.utils.utcnow()
