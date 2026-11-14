@@ -2,7 +2,11 @@
 
 <img src="assets/branding/banner.jpg" alt="SirDeep Banner" width="100%" />
 
-# ⚡ SirDeep
+<br /><br />
+
+<img src="assets/branding/logo.png" alt="SirDeep Logo" width="128" style="border-radius: 28px;" />
+
+# SirDeep
 
 **The Autonomous Community Engine & AI Companion for Developer Guilds**  
 *Self-hosted. Low-latency. Zero telemetry. Built for OpenWinter.*
