@@ -11,12 +11,29 @@
 
 <p align="center">
   <a href="#-key-capabilities">Key Features</a> •
+  <a href="#-demo--walkthrough">Demo Video</a> •
   <a href="#-quickstart-guide">Quickstart</a> •
   <a href="#-system-architecture">Architecture</a> •
-  <a href="#-configuration-reference">Configuration</a> •
-  <a href="#-security--intents">Security & Intents</a> •
-  <a href="#-contributing">Contributing</a>
+  <a href="docs/USAGE_GUIDE.md">Full User Guide</a> •
+  <a href="CONTRIBUTING.md">Contributing</a> •
+  <a href="CODE_OF_CONDUCT.md">Code of Conduct</a>
 </p>
+
+---
+
+## 🎬 Demo & Walkthrough
+
+Experience SirDeep in action: autonomous audit sentinel, real-time glassmorphic card rendering, and continuous 24/7 lo-fi streams.
+
+<p align="center">
+  <a href="https://github.com/OpenWinter/sirdeep">
+    <img src="assets/branding/banner.jpg" alt="SirDeep Video Demo" width="90%">
+  </a>
+</p>
+
+> 🎥 **Video Screencast**: Check out the [60-Second Feature Video & Script](docs/DEMO_WALKTHROUGH.md) for a step-by-step video recording guide and live command demonstration.
+
+---
 
 ---
 
@@ -222,10 +239,14 @@ For details on reporting security vulnerabilities, please refer to our [SECURITY
 
 ---
 
-## 🤝 Contributing
+## 🤝 Contributing & Community Standards
 
-We welcome contributions from developers worldwide! Here is how to get involved:
+We welcome contributions from developers worldwide! Before contributing, please review:
+* 📘 **[Contributing Guidelines](CONTRIBUTING.md)**: Development setup, coding style, type safety, and PR process.
+* 📜 **[Code of Conduct](CODE_OF_CONDUCT.md)**: Our standards for an inclusive, respectful open-source community.
+* 🔒 **[Security Policy](SECURITY.md)**: How to report vulnerabilities responsibly.
 
+Quick workflow:
 1. **Fork the Repository** to your personal GitHub account.
 2. **Create a Feature Branch**:
    ```bash
