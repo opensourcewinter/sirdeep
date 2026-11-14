@@ -21,19 +21,18 @@
 
 ---
 
-## 🎬 Demo & Walkthrough
+## 🎬 Demo Video & Live Walkthrough
 
-Experience SirDeep in action: autonomous audit sentinel, real-time glassmorphic card rendering, and continuous 24/7 lo-fi streams.
+Experience SirDeep in action: 1-command startup, AI pair programming, 24/7 coding radio streaming with equalizer visualizer, and dynamic glassmorphic card rendering.
 
 <p align="center">
-  <a href="https://github.com/OpenWinter/sirdeep">
-    <img src="assets/branding/banner.jpg" alt="SirDeep Video Demo" width="90%">
-  </a>
+  <img src="assets/branding/demo.gif" alt="SirDeep Demo Screencast" width="90%">
 </p>
 
-> 🎥 **Video Screencast**: Check out the [60-Second Feature Video & Script](docs/DEMO_WALKTHROUGH.md) for a step-by-step video recording guide and live command demonstration.
-
----
+<p align="center">
+  ▶️ <b><a href="assets/branding/demo.mp4">Watch Full 1080p HD Demo Video with Soundtrack (demo.mp4)</a></b> •
+  🎥 <b><a href="docs/DEMO_WALKTHROUGH.md">Video Script & Scene Breakdown</a></b>
+</p>
 
 ---
 
