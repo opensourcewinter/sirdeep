@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Rust's Borrow Checker vs Zig's Explicit Allocators",
+    "category": "⚡ Systems & Low-Level",
+    "question": "Does compile-time lifetime analysis (Rust) or explicit memory allocation without hidden control flow (Zig) offer the better developer model for production systems programming?",
+    "points": [
+      "Rust guarantees memory safety at compile time, eliminating data races and use-after-free without a GC.",
+      "Zig avoids macro magic, hidden allocations, and complex borrow checker fighting, offering faster compile times.",
+      "Where do you draw the line between developer velocity and formal safety guarantees?"
+    ]
+  },
+  {
+    "title": "Go Goroutines vs Tokio Async Runtimes in Microservices",
+    "category": "⚡ Systems & Low-Level",
+    "question": "For high-throughput network services, does Go's M:N runtime-managed scheduler beat Rust's explicit zero-cost async/await state machines in real-world maintenance?",
+    "points": [
+      "Go's colored-function-free model makes concurrency accessible and predictable for team velocity.",
+      "Tokio in Rust provides zero-allocation futures, strict task cancellation, and avoids GC pause latency.",
+      "Which model has your team found more robust under multi-gigabit traffic spikes?"
+    ]
+  },
+  {
+    "title": "SQLite in Production: Has Modern Hardware Made Client-Server DBs Overkill?",
+    "category": "🌐 Modern Architecture & Storage",
+    "question": "With modern NVMe drives, WAL mode, and Litestream/LiteFS replication, should SQLite be the default primary database for 90% of web apps instead of PostgreSQL?",
+    "points": [
+      "Zero network latency on queries; no connection pooling overhead or separate database infrastructure.",
+      "Single-writer limitation requires careful write transaction design under high concurrent mutations.",
+      "At what scale (writes/sec, dataset size) does migrating to Postgres or MySQL become unavoidable?"
+    ]
+  },
+  {
+    "title": "The Modular Monolith vs Microservices in 2026",
+    "category": "🌐 Modern Architecture & Storage",
+    "question": "Did the industry over-index on distributed microservices? Are well-bounded modular monoliths superior for engineering velocity and operational sanity?",
+    "points": [
+      "Modular monoliths provide instant in-process refactoring, atomic transactions, and zero RPC network serialization overhead.",
+      "Microservices allow independent deployment pipelines and heterogeneous technology stacks for large independent squads.",
+      "How does your team enforce strict domain boundaries inside a single codebase?"
+    ]
+  },
+  {
+    "title": "Local Quantized LLMs (Ollama/vLLM) vs Frontier Cloud APIs",
+    "category": "🧠 AI & Machine Learning",
+    "question": "When building production AI applications, is self-hosting quantized open-weights models (Llama 3, Gemma, Mistral) viable against frontier cloud APIs?",
+    "points": [
+      "Local inference guarantees absolute data privacy, zero API bills, and predictable latency with dedicated VRAM.",
+      "Frontier APIs (Claude 3.5, Gemini 1.5, GPT-4o) retain a significant reasoning and tool-calling capability gap.",
+      "Where is your project's balance between private self-hosted inference and frontier cloud models?"
+    ]
+  },
+  {
+    "title": "Agentic Reasoning Loops vs Deterministic Workflow Engines",
+    "category": "🧠 AI & Machine Learning",
+    "question": "Should AI agents have autonomous iterative feedback loops (ReAct/Plan-and-Solve), or are strict deterministic state machines with discrete LLM steps more reliable?",
+    "points": [
+      "Autonomous loops adapt dynamically to unexpected edge cases, file revisions, and runtime compilation errors.",
+      "Unconstrained loops can enter infinite self-referential rabbit holes and run up unexpected compute costs.",
+      "How do you ensure deterministic stopping conditions when orchestrating autonomous agent teams?"
+    ]
+  },
+  {
+    "title": "The Licensing Battle: Permissive (MIT/Apache 2.0) vs Copyleft (GPLv3/AGPL)",
+    "category": "🛠️ Open-Source & Culture",
+    "question": "In the era of cloud providers wrapping open-source tools as managed services, does permissive licensing still protect independent creators?",
+    "points": [
+      "Permissive licenses maximize ecosystem adoption, commercial contributions, and community growth.",
+      "Strong copyleft (AGPLv3) forces cloud vendors and derivative creators to contribute source code back to the community.",
+      "What license do you choose for your personal and team open-source repositories?"
+    ]
+  }
+]

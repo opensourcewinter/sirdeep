@@ -1,0 +1,60 @@
+# SirDeep - Autonomous Discord AI Companion & Community Automation Suite
+# Copy this file to config.yaml and customize for your server.
+
+bot:
+  name: "SirDeep"
+  prefix: "!"
+  status_text: "with code & ideas | !help"
+
+server:
+  guild_id: 0 # Replace with your Discord server ID
+  owner_ids: [] # List of owner Discord user IDs
+  name: "My Community" # e.g. OpenWinter
+  tagline: "Build together. Share freely. Keep technology open."
+
+channels:
+  audit_logs: "audit-logs"
+  dev_discussions: "dev-discussions"
+  ai_lounge: "talk-with-sirdeep"
+  watercooler: "watercooler"
+  welcome: "welcome"
+
+roles:
+  lead: "Founder / Core Lead"
+  maintainer: "Core Maintainer"
+  contributor: "Contributor"
+  builder: "Builder"
+
+features:
+  anti_nuke: true
+  audit_logging: true
+  dev_debates: true
+  coding_radio: true
+  contributor_xp: true
+  ai_lounge: true
+
+radio:
+  default_station: "lofi"
+  stations:
+    lofi:
+      name: "24/7 Lo-Fi Chillhop"
+      url: "https://streams.ilovemusic.de/iloveradio17.mp3"
+      emoji: "☕"
+      description: "Relaxed beats for smooth programming."
+    synthwave:
+      name: "Nightwave Synthwave"
+      url: "https://plaza.one/mp3"
+      emoji: "⚡"
+      description: "Driving synths for high-tempo hacking."
+    ambient:
+      name: "Deep Focus Ambient"
+      url: "http://ice1.somafm.com/groovesalad-128-mp3"
+      emoji: "🌌"
+      description: "Downtempo soundscapes without drums."
+
+ai:
+  provider: "openrouter" # Options: openrouter, gemini, openai, ollama
+  model: "google/gemma-4-26b-a4b-it:free"
+  persona_name: "SirDeep"
+  max_memory_messages: 20
+  memory_ttl_seconds: 7200
