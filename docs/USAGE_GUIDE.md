@@ -318,4 +318,4 @@ sudo systemctl status sirdeep
 
 ---
 
-*Need more help? Join the [OpenWinter Discord Community](https://github.com/OpenWinter) or open a GitHub Issue!*
+*Need more help? Join the [OpenWinter Discord Community](https://github.com/opensourcewinter) or open a GitHub Issue!*

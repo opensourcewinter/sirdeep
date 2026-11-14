@@ -67,7 +67,7 @@ class AIEngine:
             headers = {
                 "Authorization": f"Bearer {api_key}",
                 "Content-Type": "application/json",
-                "HTTP-Referer": "https://github.com/OpenWinter/sirdeep",
+                "HTTP-Referer": "https://github.com/opensourcewinter/sirdeep",
                 "X-Title": "SirDeep Discord Companion"
             }
             payload = {

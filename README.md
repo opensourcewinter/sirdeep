@@ -106,7 +106,7 @@ Deploy SirDeep in an isolated Linux container with pre-bundled FFmpeg and TrueTy
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/OpenWinter/sirdeep.git
+git clone https://github.com/opensourcewinter/sirdeep.git
 cd sirdeep
 
 # 2. Configure credentials
@@ -128,7 +128,7 @@ docker compose logs -f
 
 ```bash
 # 1. Clone & enter project
-git clone https://github.com/OpenWinter/sirdeep.git
+git clone https://github.com/opensourcewinter/sirdeep.git
 cd sirdeep
 
 # 2. Create and activate a virtual environment
@@ -213,7 +213,7 @@ sirdeep/
 
 ## 🤝 Community & Contributing
 
-SirDeep is developed and maintained by the **[OpenWinter](https://github.com/OpenWinter)** engineering community.
+SirDeep is developed and maintained by the **[OpenWinter](https://github.com/opensourcewinter)** engineering community.
 
 * 📘 Review our **[Contributing Guidelines](CONTRIBUTING.md)** for coding standards, type hints, and PR workflow.
 * 📜 Review our **[Code of Conduct](CODE_OF_CONDUCT.md)** for community values.
@@ -226,6 +226,6 @@ SirDeep is developed and maintained by the **[OpenWinter](https://github.com/Ope
 Distributed under the **[MIT License](LICENSE)**. © 2026 OpenWinter.
 
 <div align="center">
-  <b>Built with ❄️ by <a href="https://github.com/OpenWinter">OpenWinter</a></b><br>
+  <b>Built with ❄️ by <a href="https://github.com/opensourcewinter">OpenWinter</a></b><br>
   <i>Empowering open-source engineering communities.</i>
 </div>

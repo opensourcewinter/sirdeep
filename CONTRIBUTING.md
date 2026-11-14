@@ -1,6 +1,6 @@
 # Contributing to SirDeep
 
-Welcome to **SirDeep**! We are thrilled that you want to help build and improve the flagship open-source community engine for [OpenWinter](https://github.com/OpenWinter).
+Welcome to **SirDeep**! We are thrilled that you want to help build and improve the flagship open-source community engine for [OpenWinter](https://github.com/opensourcewinter).
 
 Our mission is simple: **Build together. Share freely. Keep technology open.**
 
@@ -48,7 +48,7 @@ git clone https://github.com/<your-username>/sirdeep.git
 cd sirdeep
 
 # Add the official repository as upstream
-git remote add upstream https://github.com/OpenWinter/sirdeep.git
+git remote add upstream https://github.com/opensourcewinter/sirdeep.git
 ```
 
 ### 3. Create a Virtual Environment
@@ -147,14 +147,14 @@ We follow the **[Conventional Commits](https://www.conventionalcommits.org/)** s
    ```bash
    git push origin feat/add-deepseek-provider
    ```
-6. **Open a Pull Request** on GitHub against `OpenWinter/sirdeep:main`.
+6. **Open a Pull Request** on GitHub against `opensourcewinter/sirdeep:main`.
 7. Fill out the PR template describing the purpose, changes made, and verification steps.
 
 ---
 
 ## 🔒 Reporting Bugs & Security Issues
 
-* For **general bugs and feature requests**, please open a public [GitHub Issue](https://github.com/OpenWinter/sirdeep/issues).
+* For **general bugs and feature requests**, please open a public [GitHub Issue](https://github.com/opensourcewinter/sirdeep/issues).
 * For **security vulnerabilities**, **DO NOT** create a public issue. Follow our private disclosure process detailed in [SECURITY.md](SECURITY.md).
 
 ---
