@@ -33,12 +33,26 @@ Unlike bloated, multi-purpose bots loaded with invasive analytics, SirDeep opera
 
 | Subsystem | Capabilities | Technology Stack |
 | :--- | :--- | :--- |
-| **🛡️ Audit Sentinel** | Captures kicks, bans, timeouts, and channel/role lifecycle updates into `#audit-logs`. | Discord Audit Gateway v10 |
-| **🚨 Anti-Nuke Shield** | Intercepts rapid channel/role deletions and strips administrative roles from flagged actors. | Sliding Window Velocity Limiter |
-| **🧠 AI Companion** | High-signal pair programming, systems debugging, and sliding-window context memory. | Local Ollama GPU / OpenRouter |
-| **📻 24/7 Deep Radio** | Continuous audio stream with automatic gateway reconnects on network drops. | Hardware-Accelerated FFmpeg |
-| **🏆 Contributor Cards** | High-DPI (1000×520) glassmorphic cards with anti-aliased avatars and tier progression. | Pillow (PIL) Dynamic Compositor |
-| **💬 Tech Dilemmas** | Automated scheduled engineering debates with automatic thread indexing. | Asyncio Event Scheduler |
+| <img src="assets/emojis/sirdeep_verified.png" width="22" valign="middle" /> **Audit Sentinel** | Captures kicks, bans, timeouts, and channel/role lifecycle updates into `#audit-logs`. | Discord Audit Gateway v10 |
+| <img src="assets/emojis/sirdeep_settings.png" width="22" valign="middle" /> **Anti-Nuke Shield** | Intercepts rapid channel/role deletions and strips administrative roles from flagged actors. | Sliding Window Velocity Limiter |
+| <img src="assets/emojis/sirdeep_coding.png" width="22" valign="middle" /> **AI Companion** | High-signal pair programming, systems debugging, and sliding-window context memory. | Local Ollama GPU / OpenRouter |
+| <img src="assets/emojis/sirdeep_voice.png" width="22" valign="middle" /> **24/7 Deep Radio** | Continuous audio stream with automatic gateway reconnects on network drops. | Hardware-Accelerated FFmpeg |
+| <img src="assets/emojis/sirdeep_goated.png" width="22" valign="middle" /> **Contributor Cards** | High-DPI (1000×520) glassmorphic cards with anti-aliased avatars and tier progression. | Pillow (PIL) Dynamic Compositor |
+| <img src="assets/emojis/sirdeep_idea.png" width="22" valign="middle" /> **Tech Dilemmas** | Automated scheduled engineering debates with automatic thread indexing. | Asyncio Event Scheduler |
+
+---
+
+## 🎭 Official Mascot & Emoji Pack
+
+SirDeep includes a dedicated set of custom developer emojis designed for modern Discord guilds:
+
+<div align="center">
+
+| `:sirdeep_cool:` | `:sirdeep_coding:` | `:sirdeep_idea:` | `:sirdeep_voice:` | `:sirdeep_verified:` | `:sirdeep_coffee:` | `:sirdeep_hype:` | `:sirdeep_goated:` |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| <img src="assets/emojis/sirdeep_cool.png" width="48" height="48" /> | <img src="assets/emojis/sirdeep_coding.png" width="48" height="48" /> | <img src="assets/emojis/sirdeep_idea.png" width="48" height="48" /> | <img src="assets/emojis/sirdeep_voice.png" width="48" height="48" /> | <img src="assets/emojis/sirdeep_verified.png" width="48" height="48" /> | <img src="assets/emojis/sirdeep_coffee.png" width="48" height="48" /> | <img src="assets/emojis/sirdeep_hype.png" width="48" height="48" /> | <img src="assets/emojis/sirdeep_goated.png" width="48" height="48" /> |
+
+</div>
 
 ---
 
@@ -187,6 +201,7 @@ python main.py
 sirdeep/
 ├── assets/
 │   ├── branding/              # High-DPI banner and contributor card assets
+│   ├── emojis/                # Official SirDeep developer mascot emoji pack
 │   └── fonts/                 # Bundled TrueType typography
 ├── config/
 │   ├── config.example.yaml    # Server channels, thresholds, and station configs
