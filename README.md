@@ -9,13 +9,13 @@
 # SirDeep
 
 **The Autonomous Community Engine & AI Companion for Developer Guilds**  
-*Self-hosted. Low-latency. Zero telemetry. Built for OpenWinter.*
+*Self-hosted. Low-latency. Zero telemetry. Built for [OpenWinter](https://openwinter.dev).*
 
 ```
 v1.0.1-release • Python 3.11+ • Discord Gateway v10 • MIT Licensed • Docker Ready
 ```
 
-[Architecture](#-architecture) · [Feature Matrix](#-feature-matrix) · [Contributor Cards](#-contributor-passports) · [Quickstart](#-quickstart) · [Configuration](#-configuration) · [Documentation](docs/USAGE_GUIDE.md) · [Contributing](CONTRIBUTING.md)
+[Website](https://openwinter.dev) · [Architecture](#-architecture) · [Feature Matrix](#-feature-matrix) · [Contributor Cards](#-contributor-passports) · [Quickstart](#-quickstart) · [Configuration](#-configuration) · [Documentation](docs/USAGE_GUIDE.md) · [Contributing](CONTRIBUTING.md)
 
 </div>
 
@@ -232,8 +232,9 @@ sirdeep/
 
 ## 🤝 Community & Contributing
 
-SirDeep is developed and maintained by the **[OpenWinter](https://github.com/opensourcewinter)** engineering community.
+SirDeep is developed and maintained by the **[OpenWinter](https://openwinter.dev)** ([@opensourcewinter](https://github.com/opensourcewinter)) engineering community.
 
+* 🌐 **Official Website**: [openwinter.dev](https://openwinter.dev)
 * 📘 Review our **[Contributing Guidelines](CONTRIBUTING.md)** for coding standards, type hints, and PR workflow.
 * 📜 Review our **[Code of Conduct](CODE_OF_CONDUCT.md)** for community values.
 * 🔒 Review our **[Security Policy](SECURITY.md)** for private vulnerability reporting.
@@ -245,6 +246,6 @@ SirDeep is developed and maintained by the **[OpenWinter](https://github.com/ope
 Distributed under the **[MIT License](LICENSE)**. © 2026 OpenWinter.
 
 <div align="center">
-  <b>Built with ❄️ by <a href="https://github.com/opensourcewinter">OpenWinter</a></b><br>
+  <b>Built with ❄️ by <a href="https://openwinter.dev">OpenWinter</a></b><br>
   <i>Empowering open-source engineering communities.</i>
 </div>
